@@ -118,10 +118,6 @@ After saving at least one run, execute:
 
 The evaluator checks report sections, citation count, source count, and critic feedback.
 
-## Resume Bullet
-
-Built a job-based streaming multi-agent research assistant using FastAPI, LangChain, Mistral Small, Tavily Search, retryable web scraping, source scoring, citation-aware structured reports, critic feedback, SQLite job/history persistence, lightweight evals, and a live progress UI.
-
 ## Future Improvements
 
 - Add user accounts and per-user histories.
