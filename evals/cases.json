@@ -1,0 +1,20 @@
+[
+  {
+    "topic": "AI in drug discovery",
+    "required_sections": ["Introduction", "Key Findings", "Conclusion", "Sources"],
+    "min_citations": 2,
+    "min_sources": 3
+  },
+  {
+    "topic": "renewable energy storage trends",
+    "required_sections": ["Introduction", "Key Findings", "Conclusion", "Sources"],
+    "min_citations": 2,
+    "min_sources": 3
+  },
+  {
+    "topic": "cybersecurity risks in healthcare",
+    "required_sections": ["Introduction", "Key Findings", "Conclusion", "Sources"],
+    "min_citations": 2,
+    "min_sources": 3
+  }
+]

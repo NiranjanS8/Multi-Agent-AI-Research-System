@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research Agent Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#research-form">Skip to research form</a>
+
+    <header class="app-header">
+      <a class="brand" href="/">
+        <span class="brand-mark">RA</span>
+        <span>
+          <strong>Research Agent</strong>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#workspace">Workspace</a>
+        <a href="#output">Results</a>
+      </nav>
+    </header>
+
+    <main id="workspace" class="workspace">
+      <section class="command-panel" aria-labelledby="form-title">
+        <div class="intro">
+          <p class="eyebrow">Agentic research workspace</p>
+          <p>
+            The system searches the web, inspects a relevant page, drafts a
+            structured report, then returns a concise critic review.
+          </p>
+        </div>
+
+        <form id="research-form" class="research-form">
+          <label id="form-title" for="topic">Research topic</label>
+          <div class="topic-row">
+            <input
+              id="topic"
+              name="topic"
+              type="text"
+              minlength="3"
+              maxlength="240"
+              placeholder="Example: AI adoption in Indian healthcare"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">
+              <span>Run research</span>
+            </button>
+          </div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite">
+            Ready for a research brief.
+          </p>
+        </form>
+
+        <div class="pipeline" aria-label="Research pipeline progress">
+          <div class="pipeline-step" data-step="search">
+            <span class="step-check">1</span>
+            <span>
+              <strong>Search</strong>
+              <small>Find sources</small>
+            </span>
+          </div>
+          <div class="pipeline-step" data-step="scrape">
+            <span class="step-check">2</span>
+            <span>
+              <strong>Scrape</strong>
+              <small>Read page</small>
+            </span>
+          </div>
+          <div class="pipeline-step" data-step="draft">
+            <span class="step-check">3</span>
+            <span>
+              <strong>Draft</strong>
+              <small>Write report</small>
+            </span>
+          </div>
+          <div class="pipeline-step" data-step="critique">
+            <span class="step-check">4</span>
+            <span>
+              <strong>Critique</strong>
+              <small>Review quality</small>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section id="output" class="results-shell" aria-labelledby="output-title">
+        <div class="results-header">
+          <div>
+            <p class="eyebrow">Live results</p>
+            <h2 id="output-title">Research brief</h2>
+          </div>
+        </div>
+
+        <div class="results-layout">
+          <article class="result-card report-card">
+            <div class="card-title">
+              <span>Final report</span>
+              <small>Writer output</small>
+            </div>
+            <div id="report-results" class="formatted-output empty-state">
+              Run a topic to generate the report.
+            </div>
+          </article>
+
+          <aside class="side-results">
+            <article class="result-card sources-card">
+              <div class="card-title">
+                <span>Search results</span>
+                <small>Tavily sources</small>
+              </div>
+              <div id="search-results" class="formatted-output compact-output empty-state">
+                Sources will appear after search completes.
+              </div>
+            </article>
+
+            <article class="result-card">
+              <div class="card-title">
+                <span>Critic feedback</span>
+                <small>Quality review</small>
+              </div>
+              <div id="feedback-results" class="formatted-output compact-output empty-state">
+                Critique will appear after the report is drafted.
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="history-shell" aria-labelledby="history-title">
+        <div class="card-title">
+          <span id="history-title">Recent research runs</span>
+          <small>Saved locally</small>
+        </div>
+        <div id="history-list" class="history-list empty-state">
+          No saved runs yet.
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
