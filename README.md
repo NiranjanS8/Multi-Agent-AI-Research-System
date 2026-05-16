@@ -1,6 +1,6 @@
-﻿# Multi-Agent AI Research System
+﻿# Agentic Research Assistant
 
-A portfolio-grade agentic research assistant built with FastAPI, LangChain, Mistral Small, Tavily Search, web scraping, streaming responses, source quality scoring, citation-aware reports, critic feedback, and SQLite research history.
+A Research assistant built with FastAPI, LangChain, Mistral Small, Tavily Search, web scraping, streaming responses, source quality scoring, citation-aware reports, critic feedback, and SQLite research history.
 
 ## Why This Project Matters
 
